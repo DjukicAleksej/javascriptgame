@@ -13,11 +13,22 @@ window.addEventListener('load',function(){
             this.player = new Player(this);
         }
         update(){
-
+            this.player.update();
         }
-        draw(){
-
+        draw(context){
+            this.player.draw(context);
         }
+
+        
+    }
+    const game = new Game(canvas.width,canvas.height);
+    console.log(game);
+
+    function animate() {
+        game.update();
+        game.draw(ctx);
+        requestAnimationFrame(animate);
 
     }
+    animate();
 });
