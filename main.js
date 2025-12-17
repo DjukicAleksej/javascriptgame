@@ -1,3 +1,5 @@
+import {Player} from './player.js'
+
 window.addEventListener('load',function(){
     const canvas = this.document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
@@ -8,7 +10,7 @@ window.addEventListener('load',function(){
         constructor(width, height) {
             this.width = width;
             this.height = height;
-
+            this.player = new Player(this);
         }
         update(){
 
@@ -16,6 +18,6 @@ window.addEventListener('load',function(){
         draw(){
 
         }
-        
+
     }
 });
