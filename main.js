@@ -13,10 +13,11 @@ window.addEventListener('load',function(){
             this.width = width;
             this.height = height;
             this.groundMargin = 80;
+            this.speed =3;
             this.background = new Background(this);
             this.player = new Player(this);
             this.input = new InputHandler();
-            this.speed =3;
+          
         }
         update(deltaTime){
             this.background.update();
