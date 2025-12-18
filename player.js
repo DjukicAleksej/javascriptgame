@@ -8,7 +8,7 @@ export class Player {
         this.x = 0;
         this.y = this.game.height - this.height - this.game.groundMargin;
         this.vy = 0;
-        this.weight = 1;
+        this.weight = 0.5;
         this.image = document.getElementById('player');
         this.frameX = 0;
         this.frameY = 0;
@@ -17,7 +17,7 @@ export class Player {
         this.frameInterval = 1000/this.fps;
         this.frameTimer = 0;
         this.speed = 0;
-        this.maxSpeed = 10;
+        this.maxSpeed = 5;
         this.states=[new Sitting(this), new Running(this),new Jumping(this),new Falling(this)];
         this.currentState = this.states[0];
         this.currentState.enter();
@@ -61,7 +61,7 @@ export class Player {
         console.log('STATE:', this.currentState.state);
 
         this.currentState = this.states[state];
-        this.game.speed = speed;
+        this.game.speed =  this.game.maxSpeed * speed;
         this.currentState.enter();
     }
 }
