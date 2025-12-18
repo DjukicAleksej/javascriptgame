@@ -58,7 +58,6 @@ export class Player {
         return this.y >= this.game.height - this.height -this.game.groundMargin;
     }
     setState(state, speed){
-        console.log('STATE:', this.currentState.state);
 
         this.currentState = this.states[state];
         this.game.speed =  this.game.maxSpeed * speed;
