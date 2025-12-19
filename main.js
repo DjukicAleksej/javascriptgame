@@ -50,6 +50,7 @@ window.addEventListener('load',function(){
                 if(particle.markedForDeletion) this.particles.splice(index, 1);
             });    
             
+            
         }
         draw(context){
             this.background.draw(context);
