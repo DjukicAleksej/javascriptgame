@@ -1,5 +1,5 @@
 import { GroundEnemy } from './enemies.js';
-import {Sitting ,Running,Jumping,Falling,Rolling, Diving} from './playerStates.js'
+import {Sitting ,Running,Jumping,Falling,Rolling, Diving , Hit} from './playerStates.js'
 
 export class Player {
     constructor(game){
@@ -19,7 +19,7 @@ export class Player {
         this.frameTimer = 0;
         this.speed = 0;
         this.maxSpeed = 3;
-        this.states=[new Sitting(this.game), new Running(this.game),new Jumping(this.game),new Falling(this.game),new Rolling(this.game), new Diving(this.game)];
+        this.states=[new Sitting(this.game), new Running(this.game),new Jumping(this.game),new Falling(this.game),new Rolling(this.game), new Diving(this.game),new Hit(this.game)];
     }
     update(input, deltaTime){
         this.checkCollision();
@@ -70,13 +70,16 @@ export class Player {
         this.game.enemies.forEach(enemy => {
             if(
                 enemy.x < this.x + this.width && enemy.x + enemy.width > this.x && enemy.y < this.y + this.height && enemy.y + enemy.height > this.y
-            ){
+            ){   
                 //coollision detected
                 enemy.markedForDeletion = true;
+                if(this.currentState === this.states[4] || this.currentState === this.states[5]){
+                    this.game.score++;
+                } else {
+                    this.setState(6,0);
+                }
                 this.game.score++;
-            } else {
-
             }
-        })
+        });
     }
 }
