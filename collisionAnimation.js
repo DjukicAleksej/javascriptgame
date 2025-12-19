@@ -1,4 +1,4 @@
-class CollisionAnimation {
+export class CollisionAnimation {
     constructor (game,x,y){
         this.game = game;
         this.image = document.getElementById('collisionAnimation');
@@ -17,5 +17,7 @@ class CollisionAnimation {
     draw(context){
         context.drawImage(this.image,this.frameX * this.spriteWidth,0,this.spriteWidth,this.spriteHeight, this.x,this.y,this.width,this.height);
     }
-    
+    update(){
+        this.x -= this.game.speed;
+    }
 }
