@@ -50,6 +50,7 @@ window.addEventListener('load',function(){
             this.enemies.forEach(enemy =>{
                 enemy.draw(context);
             });
+            this.UI.draw(context);
         }
         addEnemy(){
             
