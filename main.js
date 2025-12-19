@@ -26,6 +26,8 @@ window.addEventListener('load',function(){
             this.debug = true;
             this.score = 0;
             this.fontColor = 'black';
+            this.player.currentState = this.player.states[0];
+        this.player.currentState.enter();
         }
         update(deltaTime){
             this.background.update();
