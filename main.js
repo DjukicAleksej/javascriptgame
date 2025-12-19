@@ -3,6 +3,7 @@ import {InputHandler} from './input.js'
 import { Background } from './background.js';
 import { FlyingEnemy,ClimbingEnemy,GroundEnemy } from './enemies.js';
 import { UI} from './UI.js'
+
 window.addEventListener('load',function(){
     const canvas = this.document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
