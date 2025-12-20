@@ -5,6 +5,40 @@ import { FlyingEnemy,ClimbingEnemy,GroundEnemy } from './enemies.js';
 import { UI} from './UI.js'
 
 window.addEventListener('load',function(){
+    const music = document.getElementById('bg-music');
+const toggleBtn = document.getElementById('musicToggle');
+
+music.volume = 0.25;
+music.loop = true;
+
+let musicStarted = false;
+
+function startMusicOnce() {
+    if (!musicStarted) {
+        music.play().catch(() => {});
+        musicStarted = true;
+        toggleBtn.textContent = 'MUSIC: ON';
+    }
+}
+window.addEventListener('keydown', startMusicOnce, { once: true });
+window.addEventListener('click', startMusicOnce, { once: true });
+toggleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    if (music.paused) {
+        music.play();
+        toggleBtn.textContent = 'MUSIC: ON';
+    } else {
+        music.pause();
+        toggleBtn.textContent = 'MUSIC: OFF';
+    }
+
+    toggleBtn.blur(); // 🔥 ubija Enter bug
+});
+
+
+
+
     const canvas = this.document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     canvas.width = 900;
@@ -102,6 +136,7 @@ window.addEventListener('load',function(){
         
     }
     const game = new Game(canvas.width,canvas.height);
+  
     
     let lastTime = 0;
 
