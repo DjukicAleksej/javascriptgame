@@ -80,19 +80,6 @@ canvas{
 .ok {
     color: #00ff88;
 }
-.game-title {
-    text-align: center;
-    margin-bottom: 12px;
-    font-size: 28px;
-    letter-spacing: 4px;
-    color: #dfffff;
-    text-shadow: 
-    0 0 6px rgba(0,255,255,0.8),
-     0 0 14px rgba(0,255,255,0.6),
-      0 0 28px rgba(0,255,255,0.4);
-    animation: glowPulse 3s ease-in-out infinite;
-    user-select: none;
-}
 @keyframes glowPulse {
     0%,100% {
         text-shadow:
@@ -106,6 +93,56 @@ canvas{
         0 0 28px rgba(0,255,255,0.8),
         0 0 48px rgba(0,255,255,0.6);
     }
+}
+.game-title {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 28px;
+    letter-spacing: 4px;
+    color: #dfffff;
+    text-shadow: 
+    0 0 6px rgba(0,255,255,0.8),
+     0 0 14px rgba(0,255,255,0.6),
+      0 0 28px rgba(0,255,255,0.4);
+    animation: glowPulse 3s ease-in-out infinite;
+    user-select: none;
+}
+.game-subtitle {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+    color: rgba(200,255,255,0.8);
+}
+.game-subtitle span {
+    color: #00ffff;
+    font-weight: bold;
+}
+.reset-btn {
+    display: block;
+    margin: 0 auto 12px auto;
+    padding : 8px 18px;
+    font-size:  11px;
+    letter-spacing: 2px;
+    color: #00ffff;
+    background: transparent;
+    border: 1px solid rgba(0,255,255,0.6);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 
+    0 0 10px rgba(0,255,255,0.4),
+    inset 0  0 10px rgba(0,255,255,0.2);
+    transition: all 0.25s ease;
+}
+.reset-btn:hover {
+    background: rgba(0,255,255,0.1);
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.8),
+    inset 0 0 15px rgba(0,255,255,0.4);
+    transform: scale(1.05);
+}
+.reset-btn:active {
+    transform: scale(0.95);
 }
 .creepster-regular {
   font-family: "Creepster", system-ui;
