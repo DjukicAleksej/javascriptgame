@@ -2,6 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Creepster', monospace;
+}
+body {
+    height: 100vh;
+    background: #05080f;
+    overflow: hidden;
+    color: #c7f7ff;
+}
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background: radial-gradient(circle at top,#0a1a2f,#020409);
+
+}
+.mesh  {
+    position: absolute;
+    inset: 0;
+    background-image: 
+    linear-gradient(rgba(0,255,255,0.07) 1px, transparent 1px),
+    linear-gradient(90deg ,rgba(0,255,255,0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+    animation: drift 20s linear infinite;
+    filter: drop-shadow(0 0 6px cyan);
 }
 .creepster-regular {
   font-family: "Creepster", system-ui;
