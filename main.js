@@ -8,7 +8,7 @@ window.addEventListener('load',function(){
     const music = document.getElementById('bg-music');
 const toggleBtn = document.getElementById('musicToggle');
 
-music.volume = 0.25;
+music.volume = 0.16767;
 music.loop = true;
 
 let musicStarted = false;
