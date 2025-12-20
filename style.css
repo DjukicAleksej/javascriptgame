@@ -27,6 +27,30 @@ body {
     animation: drift 20s linear infinite;
     filter: drop-shadow(0 0 6px cyan);
 }
+@keyframes drift {
+    from {transform: translateY(0);}
+    to {transform: translateY(40px);}
+}
+.game-shell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 30px;
+    padding: 20px;
+}
+.canvas-container {
+    padding: 15px;
+    border-radius: 20px;
+    background: rgba(0,255,255,0.05);
+    box-shadow: 
+    0 0 30px rgba(0,255,255,0.3),
+    inset 0 0 20px rgba(0,255,255,0.02);
+    backdrop-filter: blur(12px);
+}
+canvas{
+    border-radius: 12px;
+}
 .creepster-regular {
   font-family: "Creepster", system-ui;
   font-weight: 400;
