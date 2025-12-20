@@ -10,7 +10,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <canvas id="canvas1"></canvas>
+    <div class="background">
+        <div class="mesh"></div>
+    </div>
+    <div class="game-shell">
+        <div class="hud left">
+            <h2>COMMANDS</h2>
+            <ul>
+                <li><span>← →</span> Move</li>
+                <li><span>↑</span>Jump</li>
+                <li><span>ENTER</span> Roll</li>
+                <li><span>↓ in air</span> Smash</li>
+            </ul>
+        </div>
+        <div class="canvas-container">
+            <canvas id="canvas1"></canvas>
+        </div>
+        <div class="hud right">
+            <h2>SYSTEM</h2>
+            <p>Status: <span class="ok">ONLINE</span></p>
+            <p>Engine: v0.3</p>
+            <p>Mode: RUNNER</p>
+        </div>
+    </div>
     <img id = "player" src ="assets/player.png" >
     <img id = "layer5" src ="assets/layer-5.png" >
     <img id = "layer4" src ="assets/layer-4.png" >
