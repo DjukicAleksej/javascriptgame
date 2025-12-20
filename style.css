@@ -52,26 +52,27 @@ canvas{
     border-radius: 12px;
 }
 .hud {
-    width: 200px;
-    padding: 20px;
-    background: rgba(10,20,40,0.6);
-    border: 1px solid rgba(0,255,255,0.03);
+    font-size: 30px;
+    width: 250px;
+    padding: 30px;
+    background: rgba(10,20,40,0.7);
+    border: 1px solid rgba(0,255,255,0.5);
     border-radius: 16px;
-    box-shadow: 0 0 20px rgba(0,255,255,0.25);
+    box-shadow: 0 0 20px rgba(0,255,255,0.4);
     backdrop-filter: blur(10px);
 }
 .hud h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 15px;
     color: cyan;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 .hud ul {
     list-style: none;
 }
 .hud li {
-    margin: 8px 0;
-    font-size: 14px;
+    margin: 12px 0;
+    font-size: 30px;
 }
 .hud span {
     color: #00ffff;
@@ -96,23 +97,23 @@ canvas{
 }
 .game-title {
     text-align: center;
-    margin-bottom: 12px;
-    font-size: 28px;
-    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-size: 48px;
+    letter-spacing: 6px;
     color: #dfffff;
     text-shadow: 
-    0 0 6px rgba(0,255,255,0.8),
-     0 0 14px rgba(0,255,255,0.6),
-      0 0 28px rgba(0,255,255,0.4);
+    0 0 6px rgba(0,255,255,0.9),
+     0 0 14px rgba(0,255,255,0.7),
+      0 0 28px rgba(0,255,255,0.5);
     animation: glowPulse 3s ease-in-out infinite;
     user-select: none;
 }
 .game-subtitle {
     text-align: center;
-    font-size: 12px;
-    margin-bottom: 10px;
-    letter-spacing: 1.5px;
-    color: rgba(200,255,255,0.8);
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: rgba(200,255,255,0.9);
 }
 .game-subtitle span {
     color: #00ffff;
@@ -120,18 +121,18 @@ canvas{
 }
 .reset-btn {
     display: block;
-    margin: 0 auto 12px auto;
-    padding : 8px 18px;
-    font-size:  11px;
+    margin: 0 auto 25px auto;
+    padding : 12x 28px;
+    font-size:  35px;
     letter-spacing: 2px;
     color: #00ffff;
     background: transparent;
-    border: 1px solid rgba(0,255,255,0.6);
-    border-radius: 20px;
+    border: 1px solid rgba(0,255,255,0.7);
+    border-radius: 25px;
     cursor: pointer;
     box-shadow: 
-    0 0 10px rgba(0,255,255,0.4),
-    inset 0  0 10px rgba(0,255,255,0.2);
+    0 0 10px rgba(0,255,255,0.6),
+    inset 0  0 10px rgba(0,255,255,0.3);
     transition: all 0.25s ease;
 }
 .reset-btn:hover {
